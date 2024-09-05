@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/header';
-import Instruction from './components/instruction';
+import Instructions from './components/Instruction';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import Input from './components/input';
@@ -44,31 +44,34 @@ function App() {
       >
         <h1 style={{ fontSize: '2rem', color: '#fff' }}>Técnica</h1>
         <div>
-          <Instruction
+          <Instructions
             text="Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência."
             number={1}
             important="Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;"
+            code={'https://github.com/alanmarinho/estagio-targetsistemas/blob/main/src/logic/exc1_fibonacci.js'}
           />
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Input functionToRun={fibonacci} type={'number'} />
           </div>
-          <Instruction
+          <Instructions
             text="Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre."
             number={2}
             important={
               'Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;'
             }
+            code={'https://github.com/alanmarinho/estagio-targetsistemas/blob/main/src/logic/exc2_A_occurrence.js'}
           />
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Input functionToRun={A_occurrence} type={'text'} />
           </div>
-          <Instruction
+          <Instructions
             text="Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);"
             number={3}
-            instruction={'Ao final do processamento, qual será o valor da variável SOMA?'}
+            Instructions={'Ao final do processamento, qual será o valor da variável SOMA?'}
             solution={`A variável SOMA terá o valor de ${process()}`}
+            code={'https://github.com/alanmarinho/estagio-targetsistemas/blob/main/src/logic/exc3_process.js'}
           />
-          <Instruction
+          <Instructions
             text="Descubra a lógica e complete o próximo elemento:"
             number={4}
             map={[
@@ -82,7 +85,7 @@ function App() {
             mapSoltion={mapSolutios}
           />
 
-          <Instruction
+          <Instructions
             text="Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada? "
             number={5}
             solution={
@@ -119,7 +122,7 @@ function App() {
             <FaLinkedin size={20} color="#fff" />
             <a
               style={{ color: '#fff', fontSize: '1rem' }}
-              href="https://www.linkedin.com/in/alan-marinho-1b1b5b1b/"
+              href="https://www.linkedin.com/in/alan-marinho20/"
               target="_blank"
             >
               @alanmarinho020

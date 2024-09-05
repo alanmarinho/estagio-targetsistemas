@@ -1,6 +1,7 @@
 import { CiWarning } from 'react-icons/ci';
+import { FaCode } from 'react-icons/fa';
 
-export default function Instruction({ text, number, important, instruction, map, mapSoltion, solution }) {
+export default function Instructions({ text, number, important, instruction, map, mapSoltion, solution, code }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', padding: 20 }}>
       <div style={{ display: 'flex' }}>
@@ -26,14 +27,19 @@ export default function Instruction({ text, number, important, instruction, map,
                   <div style={{ padding: 5, backgroundColor: '#f5edf0', borderRadius: 5, marginLeft: 3 }}>
                     <h2 style={{ color: '#000', fontSize: '1rem' }}>{mapSoltion[index].response}</h2>
                   </div>
-                  <h2 style={{ color: '#000', fontSize: '1rem', marginLeft: 10, color: '#63d471' }}>
-                    {mapSoltion[index].motivation}
-                  </h2>
+                  <h2 style={{ fontSize: '1rem', marginLeft: 10, color: '#63d471' }}>{mapSoltion[index].motivation}</h2>
                 </div>
               ))}
             </div>
           )}
         </div>
+        {code && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: 10 }}>
+            <a href={code} target="_blank">
+              <FaCode size={25} color="#63d471" />
+            </a>
+          </div>
+        )}
       </div>
       {important && (
         <div
